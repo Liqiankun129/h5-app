@@ -10,16 +10,12 @@ class H5_URL():
     # 测试内容：
 
     # ------------------------------------------------------------------------
-    def token_md5(text):
-        md5 = hashlib.md5()
-        md5.update(text.encode('utf-8'))
-        encrypted_text = md5.hexdigest()
-        return encrypted_text
+
 
     def test_url(name,num):
         url = "https://h5-imniki.akamaized.net"
         url1 = "https://dp3xcm62z0hzt.cloudfront.net"
-        user = f"uid={name}&token={H5_URL.token_md5(f'bfC3a72D83B9749b{name}')}&lang=zh-CN"
+        user = f"uid={name}&token={H5_URL.token_md5(f'{name}')}&lang=zh-CN"
 
         if num == 1:
 
