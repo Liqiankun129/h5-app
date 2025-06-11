@@ -33,8 +33,7 @@ if not st.session_state.authenticated:
             st.session_state.authenticated = True
             st.session_state.user = name
             st.session_state.login_time = time.time()
-            st.success(f"欢迎，{name}！登录成功。")
-            st.experimental_rerun()
+            st.success(f"欢迎，{name}！登录成功。请继续操作 ↓")
         else:
             st.error("用户名或密码错误。")
 
